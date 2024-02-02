@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Library Management System</title>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Body background color */
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            background-color: #007bff;
+        }
+
+        /* Navigation links */
+        .navbar a {
+            color: white !important;
+        }
+
+        /* Library image */
+        .library-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .library-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Container for the library image */
+        .library-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Page title */
+        .page-title {
+            margin: 20px 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Library Management System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/issue">ISSUE BOOK<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/find">SEARCH BOOKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/show_all_books">SHOW ALL BOOKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/import">IMPORT BOOKS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/return">RETURN BOOK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="member">MEMBER LIST</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Library image -->
+    <div class="container library-container">
+        <img src="https://uiii.ac.id/assets/images/1636690539-alfons-morales-YLSwjSy7stw-unsplash-2.jpg" alt="Library" class="img-fluid library-image">
+    </div>
+
+    <!-- Page title -->
+    <div class="container">
+        <h1 class="text-center page-title">Welcome to Our Library</h1>
+        <p class="text-center">Explore our vast collection of books and enjoy the reading experience!</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 Library Management System</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

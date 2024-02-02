@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .navbar-toggler-icon {
+            background-color: #007bff;
+        }
+        .navbar-text {
+            font-size: 18px;
+            color: #007bff;
+        }
+        .navbar-nav .nav-item .nav-link {
+            font-size: 16px;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            color: #007bff;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+    <title>Library Management - Import Books</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="go_home">Library Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="issue">ISSUE BOOK<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="find">SEARCH BOOKS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="show_all_books">SHOW ALL BOOKS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="import">IMPORT BOOKS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="return">RETURN BOOK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="member">MEMBER LIST </a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                LIBRARY MANAGEMENT SYSTEM
+            </span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-4">Import Books</h1>
+        <div class="section-title">Import a Single Book</div>
+        <form action="import" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" placeholder="Author's Name" name="author">
+            </div>
+            <div class="form-group">
+                <label for="number_of_books">Number of Books</label>
+                <input type="text" class="form-control" id="number_of_books" placeholder="Number of books to be imported" name="number_of_books">
+            </div>
+            <button type="submit" class="btn btn-primary">Import Book to Records</button>
+        </form>
+
+        <div class="mt-4">
+            <div class="section-title">Import All Books from API</div>
+            <form action="import_all" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="number_of_books">Number of Books</label>
+                    <input type="text" class="form-control" id="number_of_books" placeholder="Number of books to be imported" name="number_of_books">
+                </div>
+                <button type="submit" class="btn btn-primary">Import Books to Records</button>
+            </form>
+        </div>
+        
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Books</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr {
+            background-color: #ffffff;
+            border-bottom: 1px solid #f2f2f2;
+            transition: background-color 0.3s ease;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if members %}
+        <h2>MEMBER CATALOG</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>MEMBER NAME</th>
+                        <th>MEMBER ID USED TO ISSUE BOOK</th>
+                        <th>BOOK ID</th>
+                        <th>NAME OF BOOK ISSUED</th>
+                        <th>DATE OF ISSUE</th>
+                        <th>DATE OF RETURN </th>
+                        <th>PAID AMOUNT</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for member in members %}
+                    <tr>
+                        <td>{{ member.name_of_member }}</td>
+                        <td>{{ member.user_name }}</td>
+                        <td>{{ member.Book_id_issued }}</td>
+                        <td>{{ member.name_of_book_issued }}</td>
+                        <td>{{ member.Date_of_book_issued }}</td>
+                        <td>{{ member.Date_of_return }}</td>
+                        <td>{{ member.Paid_amount }}</td>
+    
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <h2>No Member Found</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
